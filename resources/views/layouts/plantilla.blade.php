@@ -48,9 +48,10 @@
     <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main_home.js') }}"></script>
+    <script src="{{ asset('assets/js/verificarDoctor.js') }}"></script>
 </body>
 
 </html>

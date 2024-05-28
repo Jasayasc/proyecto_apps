@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::table('cita', function (Blueprint $table) {
             $table->foreign(['id_paciente'], 'cita_ibfk_1')->references(['id'])->on('paciente')->onUpdate('no action')->onDelete('no action');
-            $table->foreign(['id_medico'], 'cita_ibfk_2')->references(['id'])->on('empleado')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['hora'], 'cita_ibfk_2')->references(['id'])->on('horario')->onUpdate('no action')->onDelete('no action');
+            $table->foreign(['id_medico'], 'cita_ibfk_3')->references(['id'])->on('empleado')->onUpdate('no action')->onDelete('no action');
         });
     }
 
@@ -25,6 +26,7 @@ return new class extends Migration
         Schema::table('cita', function (Blueprint $table) {
             $table->dropForeign('cita_ibfk_1');
             $table->dropForeign('cita_ibfk_2');
+            $table->dropForeign('cita_ibfk_3');
         });
     }
 };

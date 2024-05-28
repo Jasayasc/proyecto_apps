@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('cita', function (Blueprint $table) {
             $table->integer('id', true);
             $table->date('fecha');
-            $table->time('hora');
+            $table->integer('hora')->index('hora');
             $table->boolean('asistencia')->nullable();
             $table->unsignedInteger('id_paciente')->index('id_paciente');
             $table->unsignedInteger('id_medico')->index('id_medico');
