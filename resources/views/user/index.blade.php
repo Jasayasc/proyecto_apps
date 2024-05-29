@@ -71,7 +71,13 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex flex-column justify-content-center">
+
         <div class="container" data-aos="zoom-in" data-aos-delay="100">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <h1>Bienvenido <i>{{ $paciente->nombre }}</i></h1>
 
 
@@ -111,11 +117,13 @@
                                         <li><i class="bi bi-chevron-right"></i> <strong>Nombre:</strong>
                                             <input class="form-control" type="text" name="nombre"
                                                 value="{{ $paciente->nombre . ' ' . $paciente->apellido }}"
-                                                id="nombre" oninput="mostrarOcultarBoton('nombre', '{{$paciente->nombre . ' ' . $paciente->apellido}}')">
+                                                id="nombre"
+                                                oninput="mostrarOcultarBoton('nombre', '{{ $paciente->nombre . ' ' . $paciente->apellido }}')">
                                         </li>
                                         <li><i class="bi bi-chevron-right"></i> <strong>Correo:</strong>
                                             <input class="form-control" type="text" name="email" id="email"
-                                                value="{{ Auth::user()->email }}" oninput="mostrarOcultarBoton('email', '{{ Auth::user()->email }}')">
+                                                value="{{ Auth::user()->email }}"
+                                                oninput="mostrarOcultarBoton('email', '{{ Auth::user()->email }}')">
                                         </li>
                                         <li><i class="bi bi-chevron-right"></i> <strong>Direccion:</strong>
                                             <input class="form-control" type="text" name="direccion"
@@ -124,7 +132,8 @@
                                         </li>
                                         <li><i class="bi bi-chevron-right"></i> <strong>Ciudad:</strong>
                                             <input class="form-control" type="text" name="ciudad" id="ciudad"
-                                                value="{{ $paciente->ciudad }}" oninput="mostrarOcultarBoton('ciudad', '{{ $paciente->ciudad }}')">
+                                                value="{{ $paciente->ciudad }}"
+                                                oninput="mostrarOcultarBoton('ciudad', '{{ $paciente->ciudad }}')">
                                         </li>
                                     </ul>
                                 </div>
@@ -150,7 +159,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <button type="submit" id="boton" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="submit" id="boton" class="btn btn-primary">Guardar
+                                    Cambios</button>
                             </div>
                         </div>
                     </div>
@@ -308,7 +318,7 @@
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
-        function mostrarOcultarBoton(idInput,textoInput) {
+        function mostrarOcultarBoton(idInput, textoInput) {
             var inputTexto = document.getElementById(idInput);
             var boton = document.getElementById("boton");
 

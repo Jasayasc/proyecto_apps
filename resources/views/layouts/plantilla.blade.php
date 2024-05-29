@@ -51,7 +51,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main_home.js') }}"></script>
-    <script src="{{ asset('assets/js/verificarDoctor.js') }}"></script>
+    
 </body>
 
 </html>

@@ -27,7 +27,9 @@ Route::get('/admin/add/patients', [AdminController::class, 'addPatients'])->name
 
 Route::get('/cita/new',[CitasController::class,'newCita'])->name('newCita');
 Route::get('/cita/list/doctor',[CitasController::class,'fetchName'])->name('fetch.names');
-Route::post('/cita/list/hora',[CitasController::class,'fetchHorario'])->name('fetch.schedules');
+Route::get('/cita/list/fecha',[CitasController::class,'addFecha'])->name('add.names');
+Route::get('/cita/list/hora',[CitasController::class,'fetchHorario'])->name('fetch.schedules');
+Route::post('/cita/add', [CitasController::class, 'addCita'])->name('cita.add');
 Route::get('/cita/mod',[CitasController::class,'modCita'])->name('modCita');
 Route::get('/cita/del',[CitasController::class,'delCita'])->name('delCita');
 Route::get('/cita/show',[CitasController::class,'showCita'])->name('showCita');
