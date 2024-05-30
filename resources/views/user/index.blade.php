@@ -187,9 +187,6 @@
                             <h4><a href="{{ route('modCita') }}" style="text-decoration: none">Modifar cita</a></h4>
                         </div>
                         <div class="resume-item">
-                            <h4><a href="{{ route('delCita') }}" style="text-decoration: none">Eliminar cita</a></h4>
-                        </div>
-                        <div class="resume-item">
                             <h4><a href="{{ route('showCita') }}" style="text-decoration: none">Consultar Citas</a>
                             </h4>
                         </div>

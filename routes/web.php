@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\admin\graficos\GraficosController;
+use App\Http\Controllers\admin\reportes\ReportesController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CitasController;
 use App\Http\Controllers\PacienteController;
@@ -43,4 +44,10 @@ Route::get('/admin/plot/cita/dia', [GraficosController::class, 'citaDia'])->name
 Route::get('/admin/plot/inventario/consultorio', [GraficosController::class, 'inventarioConsultorio'])->name('plot.inventario.consultorio');
 Route::get('/admin/plot/paciente/ciudad', [GraficosController::class, 'pacienteCiudad'])->name('plot.paciente.ciudad');
 Route::get('/admin/plot/paciente/estado', [GraficosController::class, 'pacienteEstado'])->name('plot.paciente.estado');
+
+Route::get('/admin/pdf/cita/especialidad', [ReportesController::class, 'citaEspecialidad']);
+Route::get('/admin/pdf/paciente/asistencia', [ReportesController::class, 'pacienteAsistencia']);
+Route::get('/admin/pdf/cita/dia', [ReportesController::class, 'citaDia']);
+Route::get('/admin/pdf/inventario/consultorio', [ReportesController::class, 'inventarioConsultorio']);
+Route::get('/admin/pdf/paciente/ciudad', [ReportesController::class, 'pacienteCiudad']);
 
