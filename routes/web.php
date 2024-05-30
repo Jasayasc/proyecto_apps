@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\admin\graficos\GraficosController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CitasController;
 use App\Http\Controllers\PacienteController;
@@ -35,4 +36,11 @@ Route::get('/cita/del',[CitasController::class,'delCita'])->name('delCita');
 Route::get('/cita/show',[CitasController::class,'showCita'])->name('showCita');
 
 Route::put('/paciente/edit',[PacienteController::class,'edit'])->name('paciente.edit');
+
+Route::get('/admin/plot/cita/especialidad', [GraficosController::class, 'citaEspecialidad'])->name('plot.cita.especialidad');
+Route::get('/admin/plot/paciente/asistencia', [GraficosController::class, 'pacienteAsistencia'])->name('plot.paciente.asistencia');
+Route::get('/admin/plot/cita/dia', [GraficosController::class, 'citaDia'])->name('plot.cita.dia');
+Route::get('/admin/plot/inventario/consultorio', [GraficosController::class, 'inventarioConsultorio'])->name('plot.inventario.consultorio');
+Route::get('/admin/plot/paciente/ciudad', [GraficosController::class, 'pacienteCiudad'])->name('plot.paciente.ciudad');
+Route::get('/admin/plot/paciente/estado', [GraficosController::class, 'pacienteEstado'])->name('plot.paciente.estado');
 
