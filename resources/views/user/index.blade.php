@@ -176,16 +176,14 @@
                     <h2>Servicios</h2>
                 </div>
 
-                <div class="row">
+                <div class="row" style="padding: 10px">
                     <div class="col-lg-6">
                         <h3 class="resume-title">Citas medicas</h3>
                         <div class="resume-item">
                             <h4><a href="{{ route('newCita') }}" style="text-decoration: none">Programar nueva
                                     cita</a></h4>
                         </div>
-                        <div class="resume-item">
-                            <h4><a href="{{ route('modCita') }}" style="text-decoration: none">Modifar cita</a></h4>
-                        </div>
+                        
                         <div class="resume-item">
                             <h4><a href="{{ route('showCita') }}" style="text-decoration: none">Consultar Citas</a>
                             </h4>

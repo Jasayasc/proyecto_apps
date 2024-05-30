@@ -34,7 +34,10 @@ class CitasController extends Controller
     }
     public function showCita()
     {
-        return view('user.citas.showCita');
+        // return date('Y-m-d');
+        $paciente = Paciente::where('id_usuario', '=', Auth::user()->id)->first();
+        $citas = DB::select('call lista_de_citas('.$paciente->id.')');
+        return view('user.citas.showCita', compact('citas'));
     }
 
     public function fetchName(Request $request)

@@ -23,9 +23,10 @@ Route::get('/admin/password', [AdminController::class,'password'])->name('admin.
 Route::post('/admin/password/update', [AdminController::class,'passwordUpdate'])->name('admin.password.update');
 
 Route::get('/admin/list/users',[AdminController::class,'listUsers'])->name('admin.list.users');
-Route::get('/admin/add/admins',[AdminController::class,'addAdmins'])->name('admin.add.admins');
 Route::get('/admin/add/workers', [AdminController::class, 'addWorkers'])->name('admin.add.workers');
+Route::post('/admin/new/workers', [AdminController::class, 'newWorkers'])->name('admin.new.workers');
 Route::get('/admin/add/patients', [AdminController::class, 'addPatients'])->name('admin.add.patients');
+Route::post('/admin/new/patients', [AdminController::class, 'newPatients'])->name('admin.new.patients');
 
 Route::get('/cita/new',[CitasController::class,'newCita'])->name('newCita');
 Route::get('/cita/list/doctor',[CitasController::class,'fetchName'])->name('fetch.names');

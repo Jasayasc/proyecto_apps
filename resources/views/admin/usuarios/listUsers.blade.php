@@ -7,6 +7,11 @@
 
 @section('content')
     <p>Bienvindo al panel de gestion de administradores</p>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -50,27 +55,27 @@
                 </thead>
                 <tbody>
                     <!-- Aquí mostrarías los resultados de la búsqueda -->
-                    @foreach($usuarios as $usuario)
-                    <tr>
-                        <td scope="col" class="label-negro">{{$usuario->id_usuario}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->nombre}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->apellido}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->fecha_nacimiento}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->ciudad}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->direccion}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->telefono}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->email}}</td>
-                        <?php
+                    @foreach ($usuarios as $usuario)
+                        <tr>
+                            <td scope="col" class="label-negro">{{ $usuario->id_usuario }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->nombre }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->apellido }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->fecha_nacimiento }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->ciudad }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->direccion }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->telefono }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->email }}</td>
+                            <?php
                             $rol = $usuario->rol;
-                            $message = ($rol == 1) ? 'Admin' : (($rol == 2) ? 'Empleado' : 'Paciente');
-                        ?>
-                        <td scope="col" class="label-negro">{{$message}}</td>
-                        <td scope="col" class="label-negro">{{$usuario->consultorio}}</td>
-                        <td>
-                            <a class="btn btn-warning"><i class="bx bx-edit"></i></a>
-                            <button class="btn btn-danger">Eliminar</button>
-                        </td>
-                    </tr>
+                            $message = $rol == 1 ? 'Admin' : ($rol == 2 ? 'Empleado' : 'Paciente');
+                            ?>
+                            <td scope="col" class="label-negro">{{ $message }}</td>
+                            <td scope="col" class="label-negro">{{ $usuario->consultorio }}</td>
+                            <td>
+                                <a class="btn btn-warning"><i class="bx bx-edit"></i></a>
+                                <button class="btn btn-danger">Eliminar</button>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>

@@ -341,10 +341,6 @@ return [
                     'url' => 'admin/list/users',
                 ],
                 [
-                    'text' => 'Añadir Administradores',
-                    'url' => 'admin/add/admins',
-                ],
-                [
                     'text' => 'Añadir Empleados',
                     'url' => 'admin/add/workers',
                 ],

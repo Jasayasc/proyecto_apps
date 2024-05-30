@@ -1,1 +1,47 @@
 @extends('layouts.plantilla')
+@section('title', 'Citas')
+@section('content')
+    <div>
+        <div class="col-md-15">
+            <h2 class="titulo-azul-cobalto">Citas apartadas:</h2>
+            <table class="table">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col" class="label-negro">Fecha</th>
+                        <th scope="col" class="label-negro">Hora</th>
+                        <th scope="col" class="label-negro">Nombre del doctor</th>
+                        <th scope="col" class="label-negro">Tipo</th>
+                        <th scope="col" class="label-negro">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí mostrarías los resultados de la búsqueda -->
+                    @foreach ($citas as $cita)
+                        <tr>
+                            <td scope="col" class="label-negro">{{ $cita->fecha }}</td>
+                            <td scope="col" class="label-negro">{{ $cita->hora }}</td>
+                            <td scope="col" class="label-negro">{{ $cita->nombre . ' ' . $cita->apellido }}</td>
+                            <td scope="col" class="label-negro">{{ $cita->especialidad }}</td>
+                            <td>
+                                <?php
+                                $hoy = new DateTime();
+                                
+                                // Suponiendo que $cita->fecha contiene la fecha en formato 'Y-m-d', por ejemplo '2024-05-30'
+                                $citaFecha = new DateTime($cita->fecha);
+                                
+                                // Comparar las fechas
+                                if ($citaFecha >= $hoy) {
+                                    echo '<a class="btn btn-warning">Modificar</a>';
+                                    echo ' <a class="btn btn-danger">Eliminar</a>';
+                                } else {
+                                    echo 'La cita ya ha pasado, no se puede modificar o eliminar.';
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+@endsection
