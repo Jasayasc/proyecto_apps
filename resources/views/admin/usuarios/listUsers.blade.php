@@ -50,7 +50,6 @@
                         <th scope="col" class="label-negro">Correo</th>
                         <th scope="col" class="label-negro">Rol</th>
                         <th scope="col" class="label-negro">consultorio</th>
-                        <th scope="col" class="label-negro">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -70,11 +69,7 @@
                             $message = $rol == 1 ? 'Admin' : ($rol == 2 ? 'Empleado' : 'Paciente');
                             ?>
                             <td scope="col" class="label-negro">{{ $message }}</td>
-                            <td scope="col" class="label-negro">{{ $usuario->consultorio }}</td>
-                            <td>
-                                <a class="btn btn-warning"><i class="bx bx-edit"></i></a>
-                                <button class="btn btn-danger">Eliminar</button>
-                            </td>
+                            <td scope="col" class="label-negro">{{ $usuario->consultorio == null ? "N/A" :$usuario->consultorio }}</td>
                         </tr>
                     @endforeach
                 </tbody>

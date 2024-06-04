@@ -52,3 +52,5 @@ Route::get('/admin/pdf/cita/dia', [ReportesController::class, 'citaDia']);
 Route::get('/admin/pdf/inventario/consultorio', [ReportesController::class, 'inventarioConsultorio']);
 Route::get('/admin/pdf/paciente/ciudad', [ReportesController::class, 'pacienteCiudad']);
 
+Route::post('/cita/update', [CitasController::class, 'actualizarCita'])->name('cita.modificar');
+

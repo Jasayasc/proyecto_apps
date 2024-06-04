@@ -324,7 +324,7 @@
                                     bien de mis niños!
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
+                                <img src="https://media.revistagq.com/photos/62fe075f5ab63dcb237f86de/1:1/w_867,h_867,c_limit/better-call-saul.jpeg" class="testimonial-img"
                                     alt="" />
                                 <h3>Saul Goodman</h3>
                             </div>
@@ -457,173 +457,27 @@
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
-                    <h2>Contact</h2>
+                    <h2>Contactanos</h2>
                     <p>
-                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-                        ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-                        quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                        Quia fugiat sit in iste officiis commodi quidem hic quas.
+                        En Ositos Cariñositos, nos comprometemos a brindarte el mejor servicio de salud. Sabemos que tu bienestar y el de tus seres queridos es lo más importante, por eso estamos aquí para ayudarte en todo lo que necesites.
                     </p>
                 </div>
-
+                <div>
+                    <h3>Si tienes preguntas, inquietudes o necesitas asistencia, no dudes en contactarnos a través de los siguientes medios:</h3>
+                    <ul>
+                        <li>Teléfono: +123 456 7890</li>
+                        <li>Correo Electrónico: atencion@ositocariñositos.com</li>
+                        <li>Dirección: Calle Ficticia #123, Ciudad Imaginaria, País de Ensueño</li>
+                    </ul>
+                </div>
                 <div>
                     <iframe style="border: 0; width: 100%; height: 270px"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.081112945178!2d-74.16009099035139!3d4.579454895375935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f1aa7475d81%3A0x6f28a2ff1bedb5!2sUniversidad%20Distrital%20Francisco%20Jos%C3%A9%20De%20Caldas%20-%20Facultad%20Tecnol%C3%B3gica!5e0!3m2!1ses-419!2sco!4v1714354862168!5m2!1ses-419!2sco"
                         frameborder="0" allowfullscreen></iframe>
                 </div>
-
-                <div class="row mt-5">
-                    <div class="col-lg-4">
-                        <div class="info">
-                            <div class="address">
-                                <i class="bx bx-map"></i>
-                                <h4>Ubicacion:</h4>
-                                <p>Cl. 68d Bis ASur #49F - 70, Bogotá</p>
-                            </div>
-
-                            <div class="email">
-                                <i class="bx bx-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>notradamuso@gmail.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="bx bx-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+1 5589 55488 55s</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8 mt-5 mt-lg-0">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="row gy-2 gx-md-3">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        placeholder="Your Name" required />
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Your Email" required />
-                                </div>
-                                <div class="form-group col-12">
-                                    <input type="text" class="form-control" name="subject" id="subject"
-                                        placeholder="Subject" required />
-                                </div>
-                                <div class="form-group col-12">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                                </div>
-                                <div class="my-3 col-12">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">
-                                        Your message has been sent. Thank you!
-                                    </div>
-                                </div>
-                                <div class="text-center col-12">
-                                    <button type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- End Contact Section -->
     </main>
-    <!-- End #main -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>OnePage</h3>
-                        <p>
-                            A108 Adam Street <br />
-                            New York, NY 535022<br />
-                            United States <br /><br />
-                            <strong>Phone:</strong> +1 5589 55488 55<br />
-                            <strong>Email:</strong> info@example.com<br />
-                        </p>
-                    </div>
-
-                    <div class="col-lg-2 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li>
-                                <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i>
-                                <a href="#">Terms of service</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i>
-                                <a href="#">Privacy policy</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Our Services</h4>
-                        <ul>
-                            <li>
-                                <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i>
-                                <a href="#">Web Development</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i>
-                                <a href="#">Product Management</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i> <a href="#">Marketing</a>
-                            </li>
-                            <li>
-                                <i class="bx bx-chevron-right"></i>
-                                <a href="#">Graphic Design</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 footer-newsletter">
-                        <h4>Join Our Newsletter</h4>
-                        <p>
-                            Tamen quem nulla quae legam multos aute sint culpa legam noster
-                            magna
-                        </p>
-                        <form action="" method="post">
-                            <input type="email" name="email" /><input type="submit" value="Subscribe" />
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container d-md-flex py-4">
-            <div class="me-md-auto text-center text-md-start">
-                <div class="copyright">
-                    &copy; Copyright. All Rights Reserved
-                </div>
-            </div>
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

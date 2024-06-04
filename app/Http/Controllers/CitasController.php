@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use App\Models\Cita;
 use App\Models\Horario;
 use App\Models\Empleado;
 use App\Models\Paciente;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use function PHPUnit\Framework\isEmpty;
@@ -24,13 +25,24 @@ class CitasController extends Controller
         $doctores = Empleado::all();
         return view('user.citas.newCita', compact('doctores'));
     }
-    public function modCita()
+    public function modCita(Request $request)
     {
-        return 'Se modifica una cita';
+        $user = Auth::user();
+        $paciente = Paciente::where('id_usuario', $user->id)->first();
+        $cita = Cita::where('id', $request->id)->first();
+        $doctores = Empleado::all();
+        $horarios = Horario::all();
+
+        return view('user.citas.modCita', compact('cita', 'doctores', 'horarios'));
     }
-    public function delCita()
+    public function delCita(Request $request)
     {
-        return view('user.citas.delita');
+        try{
+            DB::select("call eliminar_cita({$request->id})");
+        }catch(Exception $e){
+            return redirect()->route('home')->withError('No se pudo eliminar la cita'.$e->getMessage());
+        }
+        return redirect()->route('home')->withSuccess('Cita eliminada con exito');
     }
     public function showCita()
     {
@@ -98,5 +110,32 @@ class CitasController extends Controller
         $cita->id_medico = $request->doctor;
         $cita->save();
         return redirect()->route('home')->withSuccess('Cita agendada con exito');
+    }
+
+    
+
+//Funcion para poder actualizar los datos de la cita del paciente
+    public function actualizarCita(Request $request)
+    {
+        // return $request;
+        $request->validate([
+            'fecha' => 'required|date',
+            'hora' => 'required|exists:horario,id',
+            'medico' => 'required|exists:empleado,id'
+        ]);
+
+        // $paciente = Paciente::where('id_usuario',Auth::user()->id)->first();
+        $cita = Cita::where('id', $request->id)->first();
+
+        if ($cita) {
+            $cita->fecha = $request->fecha;
+            $cita->hora = $request->hora;
+            $cita->id_medico = $request->medico;
+            $cita->save();
+
+            return redirect()->route('home')->with('success', 'Cita actualizada correctamente');
+        }
+
+        return redirect()->route('modCita')->with('error', 'Cita no encontrada');
     }
 }

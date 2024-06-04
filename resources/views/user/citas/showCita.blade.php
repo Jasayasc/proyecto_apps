@@ -30,9 +30,17 @@
                                 $citaFecha = new DateTime($cita->fecha);
                                 
                                 // Comparar las fechas
-                                if ($citaFecha >= $hoy) {
-                                    echo '<a class="btn btn-warning">Modificar</a>';
-                                    echo ' <a class="btn btn-danger">Eliminar</a>';
+                                if ($citaFecha > $hoy) {
+                                    // echo $cita->id;
+                                    //echo "<a href='/cita/mod' class='btn btn-warning'>Modificar</a>";
+                                    echo "<form action='/cita/mod' method='get'>";
+                                    echo "<input type='hidden' name='id' value='{$cita->id}' />";
+                                    echo "<button type='submit' class='btn btn-warning'>Modificar</button>";
+                                    echo '</form>';
+                                    echo "<form action='/cita/del' method='get'>";
+                                    echo "<input type='hidden' name='id' value='{$cita->id}' />";
+                                    echo "<button type='submit' class='btn btn-danger'>Eliminar</button>";
+                                    echo '</form>';
                                 } else {
                                     echo 'La cita ya ha pasado, no se puede modificar o eliminar.';
                                 }
